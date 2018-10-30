@@ -15,7 +15,7 @@ target/
 .project
 .classpatch
 
-# idea ingore
+# idea ignore
 .idea/
 /idea/
 *.ipr
