@@ -13,7 +13,7 @@ target/
 # eclipse ignore
 .settings/
 .project
-.classpatch
+.classpath
 
 # idea ignore
 .idea/
@@ -27,6 +27,7 @@ target/
 *.cache
 *.diff
 *.patch
+*.path
 *.tmp
 
 # system ignore
