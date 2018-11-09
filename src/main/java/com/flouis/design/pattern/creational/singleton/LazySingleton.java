@@ -19,4 +19,22 @@ public class LazySingleton {
 		return lazySingleton;
 	}
 
+	/**
+	 * 对上述经典懒汉式单例方法进行改进 ———— 使用synchronized关键字将方法变为同步(线程安全)方法，即当一个线程执行到该方法时，
+	 * 同步锁开启，防止其他线程执行该方法。
+	 */
+	public synchronized static LazySingleton getInstanceSynchronously(){
+		if (lazySingleton == null){
+			lazySingleton = new LazySingleton();
+		}
+		return lazySingleton;
+	}
+
+	/**
+	 * 改进版2:
+	 * 在改进版1中使用synchronized关键字规避了线程安全的问题，但同步写在一个static方法的声明上，那么同步锁在锁住方法的同时也会锁住这个类，
+	 * 此时这个类的其他方法或属性，就会由于同步锁而无法被调用，类的性能将被极大地削弱。
+	 * 那么有没有一个种兼顾线程安全和性能的改进，答案是有的，我们使用“双重检查”来进行改进，具体细节参见LazyDoubleCheckSingleton.java
+	 */
+
 }
