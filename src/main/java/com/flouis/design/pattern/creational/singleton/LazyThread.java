@@ -4,7 +4,8 @@ public class LazyThread implements Runnable {
 
 	public void run(){
 //		LazySingleton lazySingleton = LazySingleton.getInstance();
-		LazySingleton lazySingleton = LazySingleton.getInstanceSynchronously();
+//		LazySingleton lazySingleton = LazySingleton.getInstanceSynchronously();
+		LazyDoubleCheckSingleton lazySingleton = LazyDoubleCheckSingleton.getInstance();
 		System.out.println(Thread.currentThread().getName() + ": " + lazySingleton);
 	}
 
