@@ -1,5 +1,9 @@
 package com.flouis.design.pattern.creational.singleton;
 
+/**
+ * 懒汉式单例模式：在需要单例对象的时候才会去初始化，即延迟加载。
+ * 相比于饿汉式，写法复杂，比较难理解，但可以提高系统性能。
+ */
 public class LazySingleton {
 
 	private static LazySingleton lazySingleton = null;

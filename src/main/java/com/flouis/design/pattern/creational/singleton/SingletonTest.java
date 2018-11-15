@@ -8,8 +8,8 @@ public class SingletonTest {
 //		LazySingleton lazySingleton = LazySingleton.getInstance();
 //		System.out.println(Thread.currentThread().getName() + ": " + lazySingleton);
 
-		Thread t1 = new Thread(new LazyThread());
-		Thread t2 = new Thread(new LazyThread());
+		Thread t1 = new Thread(new SingletonThread());
+		Thread t2 = new Thread(new SingletonThread());
 		t1.start();
 		t2.start();
 		System.out.println("lazy singleton test.");
