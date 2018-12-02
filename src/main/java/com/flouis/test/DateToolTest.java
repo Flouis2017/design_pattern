@@ -1,0 +1,50 @@
+package com.flouis.test;
+
+import com.flouis.tool.DateTool;
+import org.junit.Test;
+
+import java.util.Calendar;
+import java.util.Date;
+
+/**
+ * @author Flouis
+ * @date 2018/12/02
+ * @description TODO
+ **/
+public class DateToolTest {
+
+	@Test
+	public void mainTest(){
+		Date date = Calendar.getInstance().getTime();
+		System.out.println(date);
+		String dateStr = DateTool.parseToStr(date);
+		System.out.println(dateStr);
+		dateStr = DateTool.parseToStr(date, "asdfasdf");
+		System.out.println(dateStr);
+		dateStr = DateTool.parseToStr(date, "yyyy/MM/dd HH:mm:ss.SS");
+		System.out.println(dateStr);
+
+		System.out.println(DateTool.parseToStr(null));
+	}
+
+	@Test
+	public void mainTest2(){
+		String dateStr = "2018-12-01 14:20:50";
+		System.out.println(DateTool.parseToDate(dateStr));
+		dateStr = "2018/12/01 14:20:50";
+		System.out.println(DateTool.parseToDate(dateStr, "yyyy/MM/dd HH:mm:ss"));
+		dateStr = "  ";
+		System.out.println(DateTool.parseToDate(dateStr));
+		dateStr = "asdfasdf";
+		System.out.println(DateTool.parseToDate(dateStr));
+	}
+
+	@Test
+	public void mainTest3(){
+		Date date = Calendar.getInstance().getTime();
+		System.out.println(DateTool.changeMonth(date,12));
+		date = DateTool.changeDay(date, -2);
+		System.out.println(DateTool.parseToStr(date));
+	}
+
+}
