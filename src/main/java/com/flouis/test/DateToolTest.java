@@ -3,6 +3,9 @@ package com.flouis.test;
 import com.flouis.tool.DateTool;
 import org.junit.Test;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -45,6 +48,18 @@ public class DateToolTest {
 		System.out.println(DateTool.changeMonth(date,12));
 		date = DateTool.changeDay(date, -2);
 		System.out.println(DateTool.convertToStr(date));
+	}
+
+	@Test
+	public void mainTest4(){
+		Timestamp timestamp = new Timestamp(Calendar.getInstance().getTimeInMillis());
+		System.out.println(timestamp.toString().substring(0,19));
+
+		System.out.println(Timestamp.valueOf("2018-11-07 00:28:38"));
+//		System.out.println(Timestamp.valueOf("2018/11/07 00:28:38"));
+		System.out.println(Timestamp.valueOf(LocalDateTime.now()));
+
+		System.out.println(LocalDateTime.now());
 	}
 
 }
