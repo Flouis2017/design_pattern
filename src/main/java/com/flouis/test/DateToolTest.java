@@ -17,26 +17,26 @@ public class DateToolTest {
 	public void mainTest(){
 		Date date = Calendar.getInstance().getTime();
 		System.out.println(date);
-		String dateStr = DateTool.parseToStr(date);
+		String dateStr = DateTool.convertToStr(date);
 		System.out.println(dateStr);
-		dateStr = DateTool.parseToStr(date, "asdfasdf");
+		dateStr = DateTool.convertToStr(date, "asdfasdf");
 		System.out.println(dateStr);
-		dateStr = DateTool.parseToStr(date, "yyyy/MM/dd HH:mm:ss.SS");
+		dateStr = DateTool.convertToStr(date, "yyyy/MM/dd HH:mm:ss.SS");
 		System.out.println(dateStr);
 
-		System.out.println(DateTool.parseToStr(null));
+		System.out.println(DateTool.convertToStr(null));
 	}
 
 	@Test
 	public void mainTest2(){
 		String dateStr = "2018-12-01 14:20:50";
-		System.out.println(DateTool.parseToDate(dateStr));
+		System.out.println(DateTool.convertToDate(dateStr));
 		dateStr = "2018/12/01 14:20:50";
-		System.out.println(DateTool.parseToDate(dateStr, "yyyy/MM/dd HH:mm:ss"));
+		System.out.println(DateTool.convertToDate(dateStr, "yyyy/MM/dd HH:mm:ss"));
 		dateStr = "  ";
-		System.out.println(DateTool.parseToDate(dateStr));
+		System.out.println(DateTool.convertToDate(dateStr));
 		dateStr = "asdfasdf";
-		System.out.println(DateTool.parseToDate(dateStr));
+		System.out.println(DateTool.convertToDate(dateStr));
 	}
 
 	@Test
@@ -44,7 +44,7 @@ public class DateToolTest {
 		Date date = Calendar.getInstance().getTime();
 		System.out.println(DateTool.changeMonth(date,12));
 		date = DateTool.changeDay(date, -2);
-		System.out.println(DateTool.parseToStr(date));
+		System.out.println(DateTool.convertToStr(date));
 	}
 
 }

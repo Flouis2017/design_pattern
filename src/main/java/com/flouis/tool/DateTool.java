@@ -15,7 +15,7 @@ public class DateTool {
 
 	public final static String SQL_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-	public static String parseToStr(Date date){
+	public static String convertToStr(Date date){
 		if (date == null){
 			return null;
 		}
@@ -28,7 +28,7 @@ public class DateTool {
 		return null;
 	}
 
-	public static String parseToStr(Date date, String dateFormat){
+	public static String convertToStr(Date date, String dateFormat){
 		if (date == null){
 			return null;
 		}
@@ -41,7 +41,7 @@ public class DateTool {
 		return null;
 	}
 
-	public static Date parseToDate(String dateStr){
+	public static Date convertToDate(String dateStr){
 		if (StringUtils.isBlank(dateStr)){
 			return null;
 		}
@@ -54,7 +54,7 @@ public class DateTool {
 		return null;
 	}
 
-	public static Date parseToDate(String dateStr, String dateFormat){
+	public static Date convertToDate(String dateStr, String dateFormat){
 		if (StringUtils.isBlank(dateStr)){
 			return null;
 		}
