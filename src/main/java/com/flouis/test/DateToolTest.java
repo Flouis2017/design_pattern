@@ -1,11 +1,13 @@
 package com.flouis.test;
 
 import com.flouis.tool.DateTool;
+import com.google.common.collect.Maps;
 import org.junit.Test;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * @author Flouis
@@ -58,6 +60,10 @@ public class DateToolTest {
 		System.out.println(Timestamp.valueOf(LocalDateTime.now()));
 
 		System.out.println(LocalDateTime.now());
+
+		Map<String, Object> map = Maps.newHashMap();
+		map.put("name", "Flouis");
+		System.out.println(map.get("sadf"));
 	}
 
 }
