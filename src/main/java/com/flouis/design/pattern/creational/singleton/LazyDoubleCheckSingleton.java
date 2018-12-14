@@ -3,7 +3,7 @@ package com.flouis.design.pattern.creational.singleton;
 /**
  * @author Flouis
  * @date 2018/11/09
- * @description TODO
+ * @description
  **/
 public class LazyDoubleCheckSingleton {
 
