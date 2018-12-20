@@ -8,7 +8,7 @@ public class RandomTest {
 
 	@Test
 	public void randomTest(){
-		System.out.println("Test TortoiseGit pull");
+		System.out.println("Test TortoiseGit pull...");
 		System.out.println(getRandom(1, 10));
 	}
 
