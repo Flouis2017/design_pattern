@@ -3,6 +3,7 @@ package com.flouis.test;
 import com.flouis.entity.User;
 import com.flouis.tool.MapTool;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import org.junit.Test;
 
 import java.util.List;
@@ -51,6 +52,17 @@ public class MapToolTest {
 		System.out.println(resList.get(0).get("username"));
 	}
 
-
+	@Test
+	public void mapCopyTest(){
+		Map<String, String> strMap = Maps.newHashMap();
+		strMap.put("name", "Flouis");
+		strMap.put("nationality", "中国");
+		strMap.put("gender", "男");
+		Map<String, Object> resMap = Maps.newHashMap();
+		resMap.putAll(strMap);
+		resMap.put("age", 25);
+		System.out.println("strMap: " + strMap);
+		System.out.println("resMap: " + resMap);
+	}
 
 }
