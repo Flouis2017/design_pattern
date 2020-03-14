@@ -10,9 +10,10 @@ public class NowcoderTest {
 
 //		_1();
 //		_2();
-		String a = "asdfw";
-		String b = String.format("%-8s", a).replace(" ", "0");
-		System.out.println(b);
+		_3();
+//		String a = "123456789";
+//		String b = String.format("%-8s", a).replace(" ", "0");
+//		System.out.println(__3(a));
 
 	}
 
@@ -45,14 +46,33 @@ public class NowcoderTest {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		String str2 = sc.nextLine();
+		resList.addAll(__3(str));
+		resList.addAll(__3(str2));
+		for (String x : resList){
+			System.out.println(x);
+		}
+	}
 
-		if (str.length() > 100){
+	public static List<String> __3(String str){
+		List<String> list = new ArrayList<>();
+		int len = str.length();
+		if (len == 0){
+			return list;
+		}
+		if (len > 100){
 			str = str.substring(0, 100);
 		}
-		if (str2.length() > 100){
-			str2 = str2.substring(0, 100);
+		int num = len / 8;
+		int offNum = len % 8;
+		for (int i = 0; i < num; i++){
+			list.add(str.substring(i*8, (i+1)*8));
 		}
-
+		if (offNum >= 1){
+			String lastSubStr = str.substring(num*8, len);
+			lastSubStr = String.format("%-8s", lastSubStr).replace(" ", "0");
+			list.add(lastSubStr);
+		}
+		return list;
 	}
 
 }
