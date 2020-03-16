@@ -10,11 +10,12 @@ public class NowcoderTest {
 
 //		_1();
 //		_2();
-		_3();
+//		_3();
+//		_4();
+//		_5(); // $bo*y gi!r#l # --》 l r gi y bo
 //		String a = "123456789";
 //		String b = String.format("%-8s", a).replace(" ", "0");
 //		System.out.println(__3(a));
-
 	}
 
 	// 字符串最后一个单词的长度
@@ -73,6 +74,28 @@ public class NowcoderTest {
 			list.add(lastSubStr);
 		}
 		return list;
+	}
+
+	// 字符串反转
+	public static void _4(){
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		char[] chArr = str.toCharArray();
+		for (int i = chArr.length - 1; i >= 0; i--){
+			System.out.print(chArr[i]);
+		}
+	}
+
+	// 【中级】单词倒排
+	public static void _5(){
+		Scanner sc = new Scanner(System.in);
+		String res = "";
+		String[] strArr = sc.nextLine().trim().split("[^a-zA-Z]");
+		for (int i=strArr.length - 1; i >= 0; i--){
+			res += strArr[i] + " ";
+		}
+		res = res.trim();
+		System.out.println(res);
 	}
 
 }
