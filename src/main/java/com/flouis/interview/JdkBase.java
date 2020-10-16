@@ -18,9 +18,15 @@ public class JdkBase {
 
 
 		Integer f1 = -128;
+		System.out.println("f1 hashCode:" + f1.hashCode());
 		Integer f2 = -128;
+		System.out.println("f2 hashCode:" + f2.hashCode());
 		Integer f3 = 128;
+		System.out.println("f3 hashCode:" + f3.hashCode());
 		Integer f4 = 128;
+		System.out.println("f4 hashCode:" + f4.hashCode());
+		Integer f5 = 10000;
+		System.out.println("f5 hashCode:" + f5.hashCode());
 
 		System.out.println(f1 == f2); // true
 		System.out.println(f3 == f4); // false
