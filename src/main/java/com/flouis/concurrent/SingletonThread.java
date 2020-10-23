@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 public enum SingletonThread {
 
-	Instance;
+	INSTANCE;
 
 	ExecutorService service;
 

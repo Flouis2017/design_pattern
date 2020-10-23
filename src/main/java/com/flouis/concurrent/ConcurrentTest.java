@@ -41,7 +41,7 @@ public class ConcurrentTest {
 
 	public void runThreadPool() throws Exception{
 		CountDownLatch countDownLatch = new CountDownLatch(4);
-		SingletonThread tp = SingletonThread.Instance;
+		SingletonThread tp = SingletonThread.INSTANCE;
 		tp.startTask(() -> {
 			try {
 //				Thread.sleep(1000);
@@ -82,6 +82,7 @@ public class ConcurrentTest {
 			}
 		});
 		countDownLatch.await();
+		tp.close();
 	}
 
 }
