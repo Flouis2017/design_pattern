@@ -10,6 +10,7 @@ public class HungrySingleton {
 	// 这里使不使用final关键字根据具体情况而定，如果可以很确定该单例对象是不可修改的，就加上final
 	private final static HungrySingleton hungrySingleton;
 
+	// 把单例对象初始化放在静态代码块中可以先于其他成员变量执行，提高效率，实际上和直接初始化没什么差别~
 	static {
 		hungrySingleton = new HungrySingleton();
 	}

@@ -2,13 +2,18 @@ package com.flouis.concurrent;
 
 import java.util.concurrent.*;
 
+/**
+ * @description 使用枚举实现单例 —— 其实就是饿汉式的变相写法，因为enum关键字声明的类，即枚举类默认的构造方法就是private的，
+ * 并且枚举常量（饿汉式中的单例对象）自带了public static。
+ */
 public enum SingletonThread {
 
-	INSTANCE;
+	INSTANCE; // 单例对象
 
-	ExecutorService service;
+	private ExecutorService service;
 
-	SingletonThread(){
+	// redundant [rɪˈdʌndənt] adj. 多余的，过剩的；被解雇的，失业的；冗长的，累赘的 【有道词典】
+	private SingletonThread(){
 		init();
 	}
 

@@ -7,6 +7,15 @@ import java.util.concurrent.CountDownLatch;
 public class ConcurrentTest {
 
 	@Test
+	public void singletonTest(){
+		SingletonThread st = SingletonThread.INSTANCE;
+		SingletonThread st2 = SingletonThread.INSTANCE;
+		System.out.println("st hashCode: " + st.hashCode());
+		System.out.println("st2 hashCode: " + st2.hashCode());
+		System.out.println("st == st2: " + (st == st2));
+	}
+
+	@Test
 	public void threadTest() throws Exception{
 		long timestamp = System.currentTimeMillis();
 		runThreadPool();
